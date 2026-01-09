@@ -17,6 +17,10 @@ body {
   margin: auto;
 }
 
+.container.narrow {
+  max-width: 700px;
+}
+
 /* HEADER */
 .header {
   background: rgba(2,6,23,0.8);
@@ -34,10 +38,18 @@ body {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
+.logo img {
+  height: 34px;
+}
+
+/* NAV */
 nav a {
   color: #cbd5f5;
   margin-left: 1.5rem;
@@ -65,34 +77,23 @@ nav .btn {
 }
 
 .badge {
-  display: inline-block;
   background: rgba(239,68,68,0.15);
   color: #fca5a5;
   padding: 0.3rem 0.8rem;
   border-radius: 999px;
-  margin-bottom: 1rem;
   font-size: 0.85rem;
+  display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .hero h1 {
   font-size: 3rem;
-  line-height: 1.1;
   margin-bottom: 1.2rem;
 }
 
 .hero p {
   color: #94a3b8;
-  max-width: 500px;
   margin-bottom: 2rem;
-}
-
-.hero-buttons .btn {
-  margin-right: 1rem;
-}
-
-.hero-visual {
-  display: flex;
-  justify-content: center;
 }
 
 .glass-card {
@@ -100,8 +101,8 @@ nav .btn {
   border: 1px solid rgba(255,255,255,0.15);
   padding: 3rem;
   border-radius: 24px;
+  text-align: center;
   backdrop-filter: blur(12px);
-  font-weight: 600;
 }
 
 /* BUTTONS */
@@ -109,8 +110,8 @@ nav .btn {
   display: inline-block;
   padding: 0.75rem 1.6rem;
   border-radius: 999px;
-  text-decoration: none;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .btn.primary {
@@ -126,31 +127,31 @@ nav .btn {
 /* SECTIONS */
 .section {
   padding: 6rem 0;
-  background: #020617;
 }
 
-.section.light {
-  background: #020617;
+.section.center {
+  text-align: center;
 }
 
 .section h2 {
   font-size: 2.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-/* GRID + CARDS */
+/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  margin-top: 3rem;
 }
 
 .card {
-  background: linear-gradient(180deg, #020617, #020617);
+  background: #020617;
   border: 1px solid #1e293b;
   padding: 2rem;
   border-radius: 20px;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .card:hover {
@@ -161,7 +162,6 @@ nav .btn {
 /* LIST */
 .list {
   list-style: none;
-  max-width: 600px;
 }
 
 .list li {
@@ -171,7 +171,7 @@ nav .btn {
 
 /* FORM */
 .form {
-  max-width: 500px;
+  margin-top: 2rem;
 }
 
 .form input,
@@ -181,13 +181,12 @@ nav .btn {
   margin-bottom: 1rem;
   background: #020617;
   border: 1px solid #334155;
-  color: white;
   border-radius: 12px;
+  color: white;
 }
 
 /* FOOTER */
 .footer {
-  background: #020617;
   border-top: 1px solid #1e293b;
   padding: 2rem 0;
   text-align: center;
