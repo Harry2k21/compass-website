@@ -375,7 +375,7 @@ nav .btn {
   animation: shimmer 2s infinite;
 }
 
-/* . f/s*/
+
 /* Make the fuel/car icon specifically bigger */
 .metric-box:nth-child(3) .metric-icon-large svg {
   width: 120%;
